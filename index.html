@@ -1,138 +1,159 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Parcial 2</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
 
-<div id="contenedor">
+    <div id="contenedor">
 
-    <header id="cabezal">
-        <img src="img/imagen1.jpg" alt="Imagen 1">
-        <img src="img/imagen2.jpg" alt="Imagen 2">
-        <img src="img/imagen3.jpg" alt="Imagen 3">
-    </header>
+        <!-- CABEZAL -->
 
-    <nav id="barra">
-        <a href="#">Inicio</a>
-        <a href="#">Servicios</a>
-        <a href="#">Proyectos</a>
-        <a href="#">Contactos</a>
-    </nav>
+        <header id="cabezal">
 
-    <main id="principal">
+            <img src="img/imagen1.jpg" alt="Imagen 1">
+            <img src="img/imagen2.jpg" alt="Imagen 2">
+            <img src="img/imagen3.jpg" alt="Imagen 3">
 
-        <aside id="sidebar-left"></aside>
+        </header>
 
-        <section id="cuerpo">
+        <!-- MENU -->
 
-            <div class="login">
+        <nav id="barra">
 
-                <!-- ICONO -->
-                <div class="icono">
-                    <img src="img/people.png" alt="People">
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Proyectos</a>
+            <a href="#">Contactos</a>
+
+        </nav>
+
+        <!-- CONTENIDO -->
+
+        <main id="principal">
+
+            <aside id="sidebar-left"></aside>
+
+            <section id="cuerpo">
+
+                <!-- LOGIN -->
+
+                <div class="login">
+
+                    <!-- ICONO -->
+
+                    <div class="icono">
+                        <img src="img/people.png" alt="People">
+                    </div>
+
+                    <h2>LOGIN</h2>
+
+                    <form>
+
+                        <table>
+
+                            <tr>
+                                <td>
+                                    <label>EMAIL</label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="email"
+                                    placeholder="email address"
+                                    required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label>PASSWORD</label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+
+                                    <!-- PASSWORD -->
+
+                                    <div class="pass-box">
+
+                                        <input
+                                        type="password"
+                                        id="password"
+                                        placeholder="password"
+                                        required>
+
+                                        <span id="togglePass">👁️</span>
+
+                                    </div>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <button type="submit">
+                                        LOGIN
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </form>
+
                 </div>
 
-                <h2>LOGIN</h2>
+            </section>
 
-                <form>
+            <aside id="sidebar-right"></aside>
 
-                    <table>
+        </main>
 
-                        <tr>
-                            <td>
-                                <label>EMAIL</label>
-                            </td>
-                        </tr>
+        <!-- PIE -->
 
-                        <tr>
-                            <td>
-                                <input type="email"
-                                placeholder="email address"
-                                required>
-                            </td>
-                        </tr>
+        <footer id="pie">
 
-                        <tr>
-                            <td>
-                                <label>PASSWORD</label>
-                            </td>
-                        </tr>
+            Emerson Josué Gómez Gómez
 
-                        <tr>
-                            <td>
+        </footer>
 
-                                <!-- CONTRASEÑA -->
-                                <div class="pass-box">
+    </div>
 
-                                    <input
-                                    type="password"
-                                    id="password"
-                                    placeholder="password"
-                                    required>
+    <!-- SCRIPT -->
 
-                                    <span id="togglePass">👁️</span>
+    <script>
 
-                                </div>
+        const toggle =
+        document.getElementById("togglePass");
 
-                            </td>
-                        </tr>
+        const password =
+        document.getElementById("password");
 
-                        <tr>
-                            <td>
-                                <button type="submit">
-                                    LOGIN
-                                </button>
-                            </td>
-                        </tr>
+        toggle.addEventListener("click", function () {
 
-                    </table>
+            if (password.type === "password") {
 
-                </form>
+                password.type = "text";
+                toggle.textContent = "🙈";
 
-            </div>
+            } else {
 
-        </section>
+                password.type = "password";
+                toggle.textContent = "👁️";
 
-        <aside id="sidebar-right"></aside>
+            }
 
-    </main>
+        });
 
-    <footer id="pie">
-        Emerson Josué Gómez Gómez
-    </footer>
-
-</div>
-
-<!-- SCRIPT MOSTRAR CONTRASEÑA -->
-
-<script>
-
-const toggle =
-document.getElementById("togglePass");
-
-const password =
-document.getElementById("password");
-
-toggle.addEventListener("click", function() {
-
-    if(password.type === "password") {
-
-        password.type = "text";
-        toggle.textContent = "🙈";
-
-    } else {
-
-        password.type = "password";
-        toggle.textContent = "👁️";
-
-    }
-
-});
-
-</script>
+    </script>
 
 </body>
+
 </html>
