@@ -91,18 +91,47 @@ body {
     border-left: 3px solid black;
 }
 
+/* LOGIN NUEVO CON PROFUNDIDAD */
+
 .login {
-    width: 280px;
-    background-color: #eef5f5;
-    padding: 25px;
-    border-radius: 12px;
+    width: 320px;
+    background-color: #eef4f7;
+    padding: 35px;
+    border-radius: 28px;
     text-align: center;
-    box-shadow: 0 0 15px gray;
+
+    box-shadow:
+        18px 18px 35px #c9cfd3,
+        -18px -18px 35px #ffffff;
+}
+
+.icono {
+    width: 105px;
+    height: 105px;
+    margin: -15px auto 20px;
+    background-color: #eef4f7;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+        10px 10px 22px #c9cfd3,
+        -10px -10px 22px #ffffff;
+}
+
+.icono img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
 }
 
 .login h2 {
     color: #b342b8;
-    margin-top: 0;
+    font-size: 32px;
+    letter-spacing: 3px;
+    margin: 10px 0 35px;
 }
 
 table {
@@ -112,49 +141,86 @@ table {
 label {
     display: block;
     text-align: left;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
-    color: #555;
-    margin-top: 10px;
+    color: #444;
+    margin: 18px 0 10px;
 }
 
 input {
     width: 100%;
-    padding: 9px;
-    border-radius: 20px;
+    padding: 14px 45px 14px 18px;
+    border-radius: 25px;
     border: none;
-    background-color: white;
+    background-color: #eef4f7;
     box-sizing: border-box;
-    margin-bottom: 8px;
+    font-size: 15px;
+
+    box-shadow:
+        inset 7px 7px 12px #c9cfd3,
+        inset -7px -7px 12px #ffffff;
+
+    outline: none;
 }
+
+/* CONTRASEÑA */
+
+.pass-box {
+    position: relative;
+}
+
+#togglePass {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* BOTON */
 
 button {
     width: 100%;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 15px;
+    margin-top: 35px;
     border: none;
-    border-radius: 20px;
+    border-radius: 25px;
     color: white;
     background: linear-gradient(to right, #a63db8, #d64edb);
     cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+
+    box-shadow: 8px 8px 15px #c9cfd3;
+
     transition: all 0.5s;
 }
 
 button:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     background: linear-gradient(to right, #d64edb, #a63db8);
 }
+
+/* PIE */
 
 #pie {
     height: 60px;
     background-color: #E2A9F3;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     border-top: 3px solid black;
+
     color: red;
     font-weight: bold;
-    text-shadow: 0 0 8px red, 0 0 15px white;
+
+    text-shadow:
+        0 0 8px red,
+        0 0 15px white;
+
     animation: parpadeo 1s infinite alternate;
 }
 
@@ -162,6 +228,7 @@ button:hover {
     from {
         opacity: 1;
     }
+
     to {
         opacity: 0.4;
     }
