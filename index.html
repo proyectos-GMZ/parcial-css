@@ -27,31 +27,73 @@
         <aside id="sidebar-left"></aside>
 
         <section id="cuerpo">
+
             <div class="login">
-                <h2>👤 LOGIN</h2>
+
+                <!-- ICONO -->
+                <div class="icono">
+                    <img src="img/people.png" alt="People">
+                </div>
+
+                <h2>LOGIN</h2>
 
                 <form>
+
                     <table>
+
                         <tr>
-                            <td><label>Email</label></td>
-                        </tr>
-                        <tr>
-                            <td><input type="email" placeholder="email address" required></td>
+                            <td>
+                                <label>EMAIL</label>
+                            </td>
                         </tr>
 
                         <tr>
-                            <td><label>Password</label></td>
-                        </tr>
-                        <tr>
-                            <td><input type="password" placeholder="password" required></td>
+                            <td>
+                                <input type="email"
+                                placeholder="email address"
+                                required>
+                            </td>
                         </tr>
 
                         <tr>
-                            <td><button type="submit">LOGIN</button></td>
+                            <td>
+                                <label>PASSWORD</label>
+                            </td>
                         </tr>
+
+                        <tr>
+                            <td>
+
+                                <!-- CONTRASEÑA -->
+                                <div class="pass-box">
+
+                                    <input
+                                    type="password"
+                                    id="password"
+                                    placeholder="password"
+                                    required>
+
+                                    <span id="togglePass">👁️</span>
+
+                                </div>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <button type="submit">
+                                    LOGIN
+                                </button>
+                            </td>
+                        </tr>
+
                     </table>
+
                 </form>
+
             </div>
+
         </section>
 
         <aside id="sidebar-right"></aside>
@@ -63,6 +105,34 @@
     </footer>
 
 </div>
+
+<!-- SCRIPT MOSTRAR CONTRASEÑA -->
+
+<script>
+
+const toggle =
+document.getElementById("togglePass");
+
+const password =
+document.getElementById("password");
+
+toggle.addEventListener("click", function() {
+
+    if(password.type === "password") {
+
+        password.type = "text";
+        toggle.textContent = "🙈";
+
+    } else {
+
+        password.type = "password";
+        toggle.textContent = "👁️";
+
+    }
+
+});
+
+</script>
 
 </body>
 </html>
