@@ -118,12 +118,11 @@ body {
 
     text-align: center;
 
-    box-shadow:
-        12px 12px 20px #9fa6aa,
-        -10px -10px 18px #ffffff,
-        inset 4px 4px 8px #ffffff,
-        inset -4px -4px 8px #d0d6d9;
-}
+   box-shadow:
+    20px 20px 35px #a6adb1,
+    -20px -20px 35px #ffffff,
+    inset 6px 6px 12px #ffffff,
+    inset -6px -6px 12px #cfd5d8;
 
 .icono {
     width: 105px;
