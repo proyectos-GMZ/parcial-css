@@ -263,27 +263,73 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 25px;
 
     border-top: 3px solid black;
 
-    color: red;
-
     font-weight: bold;
+}
+
+
+.nombre1 {
+
+    color: #000000;
 
     text-shadow:
-        0 0 8px red,
-        0 0 15px white;
+        0 0 5px #000000,
+        0 0 10px #000000,
+        0 0 20px white;
 
-    animation: parpadeo 1s infinite alternate;
+    animation: brillomorado 1s infinite alternate;
 }
-@keyframes parpadeo {
+
+.nombre2 {
+
+    color: #100052;
+
+    text-shadow:
+        0 0 5px #100052,
+        0 0 10px #100052,
+        0 0 20px white;
+
+    animation: brilloAzul 1s infinite alternate;
+}
+@keyframes brillomorado {
 
     from {
         opacity: 1;
+
+        text-shadow:
+            0 0 5px #000000,
+            0 0 10px #000000,
+            0 0 20px white;
     }
 
     to {
         opacity: 0.4;
+
+        text-shadow:
+            0 0 2px #000000,
+            0 0 5px #000000;
+    }
+}
+
+@keyframes brilloAzul {
+
+    from {
+        opacity: 1;
+
+        text-shadow:
+            0 0 5px #100052,
+            0 0 10px #100052,
+            0 0 20px white;
     }
 
+    to {
+        opacity: 0.4;
+
+        text-shadow:
+            0 0 2px #100052,
+            0 0 5px #100052;
+    }
 }
