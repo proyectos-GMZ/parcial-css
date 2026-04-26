@@ -114,16 +114,18 @@ body {
 
     padding: 35px;
 
-    border-radius: 18px;
+    border-radius: 22px;
 
     text-align: center;
 
-   box-shadow:
-    20px 20px 35px #a6adb1,
-    -20px -20px 35px #ffffff,
-    inset 6px 6px 12px #ffffff,
-    inset -6px -6px 12px #cfd5d8;
+    box-shadow:
+        25px 25px 45px rgba(0, 0, 0, 0.35),
+        -12px -12px 25px rgba(255, 255, 255, 0.9),
+        inset 5px 5px 10px rgba(255,255,255,0.8),
+        inset -5px -5px 10px rgba(180,180,180,0.25);
 
+    transition: all 0.5s;
+}
 .icono {
     width: 105px;
     height: 105px;
