@@ -57,12 +57,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 18px;
 
     border-bottom: 3px solid black;
 }
 
 #barra a {
+    width: 100px;
+    text-align: center;
     color: white;
     text-decoration: none;
 
@@ -73,6 +74,7 @@ body {
     background: linear-gradient(to right, #2e9afe, #81DAF5);
 
     transition: all 0.5s;
+    margin: 1px; 
 }
 
 #barra a:hover {
